@@ -131,6 +131,8 @@ foreach( $gLibertySystem->mContentTypes as $cType ) {
 $gBitSmarty->assign( 'formContentTypes', $formContentTypes );
 
 // reset the styles hash in the system - otherwise preview will contain old styles
-unset($gSharethisSystem->mStyles);
+if( isset( $gSharethisSystem->mStyles ) ){
+	unset($gSharethisSystem->mStyles);
+}
 $gSharethisSystem->getStyles();
 

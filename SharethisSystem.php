@@ -51,10 +51,10 @@ class SharethisSystem {
 		return $this->mStyles;
 	}
 
-	function isShareable( $pContent ){
+	function isShareable( &$pServiceHash ){
 		global $gBitSystem;
-		if ( !empty( $pContent->mContentTypeGuid ) ) {
-			return $gBitSystem->isFeatureActive( 'sharethis_'.$pContent->mContentTypeGuid );
+		if ( !empty( $pServiceHash['content_type_guid'] ) ) {
+			return $gBitSystem->isFeatureActive( 'sharethis_'.$pServiceHash['content_type_guid'] );
 		}
 		return false;
 	}

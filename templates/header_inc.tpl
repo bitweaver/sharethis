@@ -1,4 +1,5 @@
 {strip}
+{if $gBitSystem->isPackageActive( 'sharethis' )}
 	{assign var=styles value=$gSharethisSystem->getStyles()}
 	{if $gBitSystem->getConfig('sharethis_api_key')}
 		<script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js
@@ -14,4 +15,5 @@
 			&amp;charset=utf-8
 			"></script>
 	{/if}
+{/if}
 {/strip}

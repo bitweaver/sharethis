@@ -3,7 +3,7 @@
  * base package include
  *
  * @author   Tekimaki LCC <will@tekimaki.com>
- * @version  $Revision: 1.1 $
+ * @version  $Revision: 1.2 $
  * @package  sharethis
  */
 
@@ -21,15 +21,15 @@ if( $gBitSystem->isPackageActive( 'sharethis' ) ) {
 		'content_body_tpl' => 'bitpackage:sharethis/service_content_body_inc.tpl',
 		'content_view_tpl' => 'bitpackage:sharethis/service_content_view_inc.tpl',
 		));
-}
 
-require_once(SHARETHIS_PKG_PATH."SharethisSystem.php");
-global $gSharethisSystem;
+	require_once(SHARETHIS_PKG_PATH."SharethisSystem.php");
+	global $gSharethisSystem;
 
-// Initialize system
-if ( empty( $gSharethisSystem ) ) {
-	$gSharethisSystem = new SharethisSystem();
-	$gSharethisSystem->getStyles();
-	$gBitSmarty->assign_by_ref('gSharethisSystem', $gSharethisSystem);
+	// Initialize system
+	if ( empty( $gSharethisSystem ) ) {
+		$gSharethisSystem = new SharethisSystem();
+		$gSharethisSystem->getStyles();
+		$gBitSmarty->assign_by_ref('gSharethisSystem', $gSharethisSystem);
+	}
 }
 

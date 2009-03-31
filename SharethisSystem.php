@@ -1,5 +1,10 @@
 <?php
 /**
+ * $Header: /cvsroot/bitweaver/_bit_sharethis/SharethisSystem.php,v 1.3 2009/03/31 08:19:02 lsces Exp $
+ * @package sharethis
+ */
+
+/**
  * @package sharethis
  */
 class SharethisSystem {

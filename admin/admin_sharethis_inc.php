@@ -1,7 +1,7 @@
 <?php
 // Copyright (c) 2008 Tekimaki LCC
 // All Rights Reserved. See copyright.txt for details and a complete list of authors.
-// Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See license.txt for details.
+// Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See http://www.gnu.org/copyleft/lesser.html for details.
 
 /* options supported by ShareThis widget that we can set via our javascript include */
 // button style stored as pref: sharethis_style_button

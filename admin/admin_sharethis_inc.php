@@ -88,7 +88,7 @@ $gBitSmarty->assign( 'formServiceOptions', $formServiceOptions );
 $exclude = array( 'bituser', 'tikisticky', 'pigeonholes' );
 foreach( $gLibertySystem->mContentTypes as $cType ) {
 	if( !in_array( $cType['content_type_guid'], $exclude ) ) {
-		$formContentTypes['guids']['sharethis_'.$cType['content_type_guid']]  = $cType['content_description'];
+		$formContentTypes['guids']['sharethis_'.$cType['content_type_guid']]  = $gLibertySystem->getContentTypeName( $cType['content_type_guid'] );
 	}
 }
 

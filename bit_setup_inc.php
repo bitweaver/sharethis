@@ -3,7 +3,7 @@
  * base package include
  *
  * @author   Tekimaki LCC <will@tekimaki.com>
- * @version  $Revision: 1.2 $
+ * @version  $Revision$
  * @package  sharethis
  */
 

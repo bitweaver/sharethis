@@ -15,7 +15,6 @@ $registerHash = array(
 $gBitSystem->registerPackage( $registerHash );
 
 if( $gBitSystem->isPackageActive( 'sharethis' ) ) {
-	/*
 	$gLibertySystem->registerService( 'sharethis', SHARETHIS_PKG_NAME, array(
 		'content_nav_tpl'  => 'bitpackage:sharethis/service_content_nav_inc.tpl',
 		'content_icon_tpl' => 'bitpackage:sharethis/service_content_icon_inc.tpl',
@@ -32,6 +31,5 @@ if( $gBitSystem->isPackageActive( 'sharethis' ) ) {
 		$gSharethisSystem->getStyles();
 		$gBitSmarty->assign_by_ref('gSharethisSystem', $gSharethisSystem);
 	}
-	 */
 }
 

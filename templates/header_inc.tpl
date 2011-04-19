@@ -1,7 +1,7 @@
 {strip}
 {if $gBitSystem->isPackageActive( 'sharethis' )}
 	{assign var=styles value=$gSharethisSystem->getStyles()}
-	{if $gBitSystem->getConfig('sharethis_api_key')}
+	{if $gBitSystem->getConfig('sharethis_api_key') && empty($smarty.server.HTTPS)}
 		<script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js
 			#tabs=
 			{foreach from=$styles.tabs key=key item=tab name=tabs}

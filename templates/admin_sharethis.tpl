@@ -23,7 +23,7 @@
 			{legend legend="Display Locations"}
 				{foreach from=$formServiceOptions key=item item=output}
 					<div class="control-group">
-						{formlabel label=`$output.label` for=$item}
+						{formlabel label=$output.label for=$item}
 						{forminput}
 							{if $output.type == 'numeric'}
 								<input size="5" type='text' name="{$item}" id="{$item}" value="{$gBitSystem->getConfig($item,$output.default)}" />
@@ -32,7 +32,7 @@
 							{else}
 								{html_checkboxes name="$item" values="y" checked=$gBitSystem->getConfig($item) labels=false id=$item}
 							{/if}
-							{formhelp note=`$output.note` page=`$output.page`}
+							{formhelp note=$output.note page=$output.page}
 						{/forminput}
 					</div>
 				{/foreach}
@@ -75,7 +75,7 @@
 			{legend legend="Choose Your Colors:"}
 				{foreach from=$formColorStylesOptions key=item item=output}
 					<div class="control-group">
-						{formlabel label=`$output.label` for=$item}
+						{formlabel label=$output.label for=$item}
 						{forminput}
 							{if $output.type == 'numeric'}
 								<input size="5" type='text' name="{$item}" id="{$item}" value="{$gBitSystem->getConfig($item,$output.default)}" />
@@ -84,7 +84,7 @@
 							{else}
 								{html_checkboxes name="$item" values="y" checked=$gBitSystem->getConfig($item) labels=false id=$item}
 							{/if}
-							{formhelp note=`$output.note` page=`$output.page`}
+							{formhelp note=$output.note page=$output.page}
 						{/forminput}
 					</div>
 				{/foreach}

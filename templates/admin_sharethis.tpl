@@ -51,7 +51,7 @@
 			{if $gBitSystem->getConfig('sharethis_api_key')}
 				{legend legend="Preview"}
 					{formlabel label="Current Styles"}
-					{include file="bitpackage:sharethis/header_inc.tpl"}
+					{include file="bitpackage:sharethis/html_head_inc.tpl"}
 				{/legend}
 			{/if}
 			{legend legend="Choose Your Button:"}

@@ -92,7 +92,7 @@
 		{/jstab}
 	{/jstabs}
 	<div class="buttonHolder row submit">
-		<input type="submit" class="btn" name="sharethis_preferences" value="{tr}Change preferences{/tr}" />
+		<input type="submit" class="btn btn-default" name="sharethis_preferences" value="{tr}Change preferences{/tr}" />
 	</div>
 {/form}
 {/strip}

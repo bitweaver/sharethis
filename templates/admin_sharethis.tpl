@@ -4,7 +4,7 @@
 		{jstab title="Service Settings"}
 			<input type="hidden" name="page" value="{$page}" />
 			{legend legend="Service Settings"}
-				<div class="control-group column-group gutters">
+				<div class="form-group">
 					{formlabel label="ShareThis publisher api key" for="sharethis_api_key"}
 					{forminput}
 						<input type="text" name="sharethis_api_key" size="50" value="{if $gBitSystem->getConfig('sharethis_api_key')}{$gBitSystem->getConfig('sharethis_api_key')}{/if}" />
@@ -15,14 +15,14 @@
 					{/forminput}
 				</div>
 				{if $gBitSystem->getConfig('sharethis_api_key')}
-					<div class="control-group column-group gutters">
+					<div class="form-group">
 						{if $gBitSystem->getConfig('sharethis_api_key')}<li><a class="external" href="http://sharethis.com/account/">ShareThis Dashboard</a> (requires account login)</li>{/if}
 					</div>
 				{/if}
 			{/legend}
 			{legend legend="Display Locations"}
 				{foreach from=$formServiceOptions key=item item=output}
-					<div class="control-group column-group gutters">
+					<div class="form-group">
 						{formlabel label=$output.label for=$item}
 						{forminput}
 							{if $output.type == 'numeric'}
@@ -38,7 +38,7 @@
 				{/foreach}
 			{/legend}
 			{legend legend="Shareable Content"}
-				<div class="control-group column-group gutters">
+				<div class="form-group">
 					{formlabel label="Shareable Content Types"}
 					{forminput}
 						{html_checkboxes options=$formContentTypes.guids name=sharethis_content separator="<br />" checked=$formContentTypes.checked}
@@ -55,13 +55,13 @@
 				{/legend}
 			{/if}
 			{legend legend="Choose Your Button:"}
-				<div class="control-group column-group gutters">
+				<div class="form-group">
 					{html_radios options=$formButtonStylesOptions values=$formButtonStylesOptions id=sharethis_style_button name=sharethis_style_button checked=$gBitSystem->getConfig('sharethis_style_button', 'default') separator="<br />"}
 					{formhelp note="Select the icon which will be displayed."}
 				</div>
 			{/legend}
 			{legend legend="Choose Your Tabs:"}
-				<div class="control-group column-group gutters">
+				<div class="form-group">
 					{forminput}
 						{foreach from=$formTabStylesOptions key=item item=output}
 							<label>
@@ -74,7 +74,7 @@
 			{/legend}
 			{legend legend="Choose Your Colors:"}
 				{foreach from=$formColorStylesOptions key=item item=output}
-					<div class="control-group column-group gutters">
+					<div class="form-group">
 						{formlabel label=$output.label for=$item}
 						{forminput}
 							{if $output.type == 'numeric'}
@@ -91,8 +91,8 @@
 			{/legend}
 		{/jstab}
 	{/jstabs}
-	<div class="buttonHolder row submit">
-		<input type="submit" class="ink-button" name="sharethis_preferences" value="{tr}Change preferences{/tr}" />
+	<div class="buttonHolder control-group submit">
+		<input type="submit" class="btn btn-default" name="sharethis_preferences" value="{tr}Change preferences{/tr}" />
 	</div>
 {/form}
 {/strip}

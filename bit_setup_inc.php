@@ -29,7 +29,7 @@ if( $gBitSystem->isPackageActive( 'sharethis' ) ) {
 	if ( empty( $gSharethisSystem ) ) {
 		$gSharethisSystem = new SharethisSystem();
 		$gSharethisSystem->getStyles();
-		$gBitSmarty->assign_by_ref('gSharethisSystem', $gSharethisSystem);
+		$gBitSmarty->assignByRef('gSharethisSystem', $gSharethisSystem);
 	}
 }
 
